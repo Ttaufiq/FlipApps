@@ -18,12 +18,12 @@ public class AccountAdapter extends FragmentStatePagerAdapter {
             case 0:
                 PreferencesFragment preferencesFragment = new PreferencesFragment();
                 return preferencesFragment;
-//            case 1:
-//                InstalledFragment installedFragment = new InstalledFragment();
-//                return installedFragment;
-//            case 2:
-//                LibraryFragment libraryFragment = new LibraryFragment();
-//                return libraryFragment;
+            case 1:
+                RewardsFragment rewardsFragment = new RewardsFragment();
+                return rewardsFragment;
+            case 2:
+                PurchaseHistoryFragment purchaseHistoryFragment = new PurchaseHistoryFragment();
+                return purchaseHistoryFragment;
             default:
                 return null;
         }

@@ -12,7 +12,7 @@ import android.view.View;
 
 import com.mancj.example.R;
 
-public class AccountActivity extends AppCompatActivity implements PreferencesFragment.OnFragmentInteractionListener  {
+public class AccountActivity extends AppCompatActivity implements PreferencesFragment.OnFragmentInteractionListener, RewardsFragment.OnFragmentInteractionListener, PurchaseHistoryFragment.OnFragmentInteractionListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +28,8 @@ public class AccountActivity extends AppCompatActivity implements PreferencesFra
         //For Tab Bar widget
         TabLayout tabLayout = findViewById(R.id.tabLayoutAccount);
         tabLayout.addTab(tabLayout.newTab().setText("PREFERENCES"));
-//        tabLayout.addTab(tabLayout.newTab().setText("REWARDS"));
-//        tabLayout.addTab(tabLayout.newTab().setText("PURCHASE HISTORY"));
+        tabLayout.addTab(tabLayout.newTab().setText("REWARDS"));
+        tabLayout.addTab(tabLayout.newTab().setText("PURCHASE HISTORY"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = findViewById(R.id.pagerAccount);
