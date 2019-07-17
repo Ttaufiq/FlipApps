@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="app_download">
+        <item>Over any Networks</item>
+        <item>Over Wi-Fi only</item>
+        <item>Ask me every time</item>
+    </string-array>
+    <string-array name="app_update">
+        <item>Over any Networks</item>
+        <item>Over Wi-Fi only</item>
+        <item>Don\'t auto-update apps</item>
+    </string-array>
+</resources>

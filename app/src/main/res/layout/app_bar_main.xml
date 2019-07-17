@@ -25,7 +25,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             app:mt_navIconEnabled="true"
-            app:mt_placeholder="FlipApps" />
+            app:mt_placeholder="Search..." />
 
 
     </RelativeLayout>

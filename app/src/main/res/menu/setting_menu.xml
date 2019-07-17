@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="General">
+        <menu>
+            <item
+                android:id="@+id/notif"
+                android:title="Notification"/>
+            <item
+                android:id="@+id/pref"
+                android:title="App Download Preferences"/>
+            <item
+                android:id="@+id/updateApps"
+                android:title="Auto-Update apps"/>
+            <item
+                android:id="@+id/iconHomeScreen"
+                android:title="Add icon to Home Screen"/>
+            <item
+                android:id="@+id/history"
+                android:title="Clear local search history"/>
+        </menu>
+    </item>
+</menu>

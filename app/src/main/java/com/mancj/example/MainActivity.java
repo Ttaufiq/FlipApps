@@ -1,5 +1,6 @@
 package com.mancj.example;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -16,7 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.mancj.example.Page.AccountActivity;
 import com.mancj.example.Page.FragmentAdapter;
+import com.mancj.example.Page.MyAppsActivity;
+import com.mancj.example.Page.SettingActivity;
+import com.mancj.example.Page.WishlistActivity;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 public class MainActivity extends AppCompatActivity
@@ -35,7 +40,6 @@ public class MainActivity extends AppCompatActivity
         searchBar = findViewById(R.id.searchBar);
         searchBar.setOnSearchActionListener(this);
         searchBar.inflateMenu(R.menu.main);
-//        searchBar.setText("Hello World!");
         Log.d("LOG_TAG", getClass().getSimpleName() + ": text " + searchBar.getText());
         searchBar.setCardViewElevation(10);
         searchBar.addTextChangeListener(new TextWatcher() {
@@ -66,14 +70,6 @@ public class MainActivity extends AppCompatActivity
         PagerSlidingTabStrip tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 //        // Attach the view pager to the tab strip
         tabsStrip.setViewPager(viewPager);
-
-//        final FloatingActionButton searchButton = findViewById(R.id.searchButton);
-//        searchButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                searchBar.enableSearch();
-//            }
-//        });
     }
 
     @Override
@@ -114,14 +110,14 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        if (id == R.id.nav_apps) {
+            toMyAppsPage();
+        } else if (id == R.id.nav_wishlist) {
+            toWishlistPage();
+        } else if (id == R.id.nav_account) {
+            toAccountPage();
+        } else if (id == R.id.nav_setting) {
+            toSettingPage();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -156,5 +152,33 @@ public class MainActivity extends AppCompatActivity
                 searchBar.disableSearch();
                 break;
         }
+    }
+
+    public void toMyAppsPage() {
+        // This method is used for moving to My Apps Page
+        startActivity(new Intent(MainActivity.this, MyAppsActivity.class));
+    }
+
+    public void toWishlistPage() {
+        // This method is used for moving to Wishlist Page
+        startActivity(new Intent(MainActivity.this, WishlistActivity.class));
+    }
+
+    public void toAccountPage() {
+        // This method is used for moving to Account Page
+        startActivity(new Intent(MainActivity.this, AccountActivity.class));
+    }
+
+    public void toSettingPage() {
+        // This method is used for moving to Setting Page
+        startActivity(new Intent(MainActivity.this, SettingActivity.class));
+    }
+
+    public void shareReviews() {
+        // This method is used for sharing the reviews using bluetooth
+    }
+
+    public void sendReviews() {
+        // This method is used for sending the reviews
     }
 }

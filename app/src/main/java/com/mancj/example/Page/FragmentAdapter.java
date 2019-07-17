@@ -6,8 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class FragmentAdapter extends FragmentPagerAdapter {
 
-    final int PAGE_COUNT = 2;
-    private String tabTitles[] = new String[] { "Tab1", "Tab2" };
+    final int PAGE_COUNT = 4;
+    private String tabTitles[] = new String[] { "GAMES", "APPS", "MOVIES", "BOOKS" };
 
 
     public FragmentAdapter(FragmentManager fm) {
@@ -22,7 +22,6 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         return Fragment1.newInstance(position + 1);
-
     }
 
 

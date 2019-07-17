@@ -9,21 +9,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Page.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".Page.MyAppsActivity"
+            android:label="@string/title_activity_my_apps"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Page.WishlistActivity"
+            android:label="@string/title_activity_wishlist"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Page.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:exported="true"
-            android:name=".custom.CustomAdapterActivity">
-        </activity>
+            android:name=".custom.CustomAdapterActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
